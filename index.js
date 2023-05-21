@@ -1,6 +1,6 @@
 const strapiUrl = "http://localhost:1337";
 
-const endPointArticles = "/api/articles?populate=*";
+const endPointArticles = "/api/livres?populate=*";
 
 let articlesContainer = document.getElementById("articles");
 
