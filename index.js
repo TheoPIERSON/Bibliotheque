@@ -21,16 +21,24 @@ async function loadArticles() {
       console.log(article);
 
       let visuel = document.createElement("img");
-      visuel.src = strapiUrl + article.attributes.Images.data.attributes.formats.medium.url;
+      visuel.src = strapiUrl + article.attributes.Couverture.data.attributes.formats.medium.url;
       articlesContainer.appendChild(visuel);
 
       let h1 = document.createElement("h1");
       h1.innerHTML = article.attributes.Titres;
       articlesContainer.appendChild(h1);
 
+      let Auteur = document.createElement("h2");
+      Auteur.innerHTML = article.attributes.Auteur;
+      articlesContainer.appendChild(Auteur);
+
       let resume = document.createElement("p");
       resume.innerHTML = article.attributes.Resume;
       articlesContainer.appendChild(resume);
+
+      let avis = document.createElement("p");
+      avis.innerHTML = article.attributes.avis;
+      articlesContainer.appendChild(avis);
     }
 
     //  Si on n'a pas pu récupérer le JSON pour n'importe quelle raison
