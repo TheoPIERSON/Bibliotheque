@@ -7,3 +7,6 @@ body {
 #articles {
   font-family: "Lato", sans-serif;
 }
+img {
+  width: 60px;
+}
