@@ -3,13 +3,33 @@
 }
 body {
   font-family: "Cinzel", serif;
+  background-image: url(images/augustine-wong-li0iC0rjvvg-unsplash.jpg);
+  background-size: cover;
+}
+.titreDePage {
+  font-size: calc(4000vw / 1018);
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  color: rgb(249, 240, 229);
+  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
 }
 #articles {
   font-family: "Lato", sans-serif;
-  display: flex;
-  align-items: center;
+  color: rgb(249, 240, 229);
+  text-shadow: #000000 0.5px 0.5px, #000000 -0.5px 0.5px, #000000 -0.5px -0.5px, #000000 0.5px -0.5px;
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 5rem 30rem 20rem 5rem;
+  gap: 12px;
   justify-content: center;
+  align-items: center;
 }
 img {
   width: 60px;
+  background-color: rgba(128, 128, 128, 0.44);
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 60rem;
 }

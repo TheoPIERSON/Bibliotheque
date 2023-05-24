@@ -19,7 +19,6 @@ async function loadArticles() {
     //  On boucle sur chacun des articles contenus dans le JSON
     for (let article of json.data) {
       console.log(article);
-
       let visuel = document.createElement("img");
       visuel.src = strapiUrl + article.attributes.Couverture.data.attributes.formats.medium.url;
       visuel.classList.add("visuel");
@@ -34,6 +33,12 @@ async function loadArticles() {
       Auteur.innerHTML = article.attributes.Auteur;
       Auteur.classList.add("Auteur");
       articlesContainer.appendChild(Auteur);
+
+      let note = document.createElement("p");
+      note.innerHTML = article.attributes.note + "/10";
+      note.classList.add("note");
+      articlesContainer.appendChild(note);
+
       /*
       let resume = document.createElement("p");
       resume.innerHTML = article.attributes.Resume;
@@ -44,10 +49,6 @@ async function loadArticles() {
       avis.innerHTML = article.attributes.avis;
       articlesContainer.appendChild(avis);
 */
-      let note = document.createElement("p");
-      note.innerHTML = article.attributes.note;
-      note.classList.add("note");
-      articlesContainer.appendChild(note);
     }
 
     //  Si on n'a pas pu récupérer le JSON pour n'importe quelle raison
