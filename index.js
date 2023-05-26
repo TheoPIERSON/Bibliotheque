@@ -20,7 +20,7 @@ async function loadArticles() {
     for (let article of json.data) {
       console.log(article);
       let visuel = document.createElement("img");
-      visuel.src = strapiUrl + article.attributes.Couverture.data.attributes.formats.medium.url;
+      visuel.src = strapiUrl + article.attributes.Couverture.data.attributes.formats.thumbnail.url;
       visuel.classList.add("visuel");
       articlesContainer.appendChild(visuel);
 
